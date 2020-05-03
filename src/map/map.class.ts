@@ -1,6 +1,8 @@
 import { Cell } from '../cell/cell.class';
 
 export class Map {
+    sizeX: number;
+    sizeY: number;
     cells: Cell[];
 
 
@@ -13,11 +15,29 @@ export class Map {
      */
     constructor(x: number, y: number) {
         this.cells = [];
+        this.sizeY = y;
+        this.sizeX = x;
 
         for (let iy=0; iy<y; iy++) {
             for (let ix=0; ix<x; ix++) {
                 this.cells.push(new Cell(ix+iy>3 ? 'grass' : 'sea'));
             }
         }
+
+    }
+
+
+    /**
+     * String representation
+     */
+    toString() {
+        let s = '';
+        for (let y=0; y<this.sizeY; y++) {
+            for (let x=0; x<this.sizeX; x++) {
+                s += this.cells[y*this.sizeY + x].toString();
+            }
+            s += '\n';
+        }
+        return s;
     }
 }

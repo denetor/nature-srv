@@ -1,12 +1,22 @@
-import { Controller } from '@nestjs/common';
-import { Map } from '../map/map.class';
+import { Controller, Get } from '@nestjs/common';
+import { World } from './world.class';
 
 @Controller('world')
 export class WorldController {
-    map: Map;
+    world: World;
 
 
     constructor() {
-        this.map = new Map(10, 10);
+        this.world = new World();
+    }
+
+
+    @Get('status')
+    status() {
+        return {
+            map: {},
+            creatures: {},
+            toString: this.world.toString(),
+        }
     }
 }

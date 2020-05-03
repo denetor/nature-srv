@@ -5,4 +5,12 @@ export class Cell {
     constructor(terrain) {
         this.terrain = terrain;
     }
+
+
+    /**
+     * String representation
+     */
+    toString() {
+        return this.terrain === 'grass' ? '___' : '...';
+    }
 }
