@@ -33,12 +33,30 @@ export class World {
             s = '';
             for (let x=0; x<this.map.sizeX; x++) {
                 s += this.map.cells[y*this.map.sizeY + x].getSymbol();
-                s += ' ';
+                s += this.getCreatureSymbol(x, y) === null ? this.map.cells[y*this.map.sizeY + x].getSymbol() : this.getCreatureSymbol(x, y);
                 s += this.map.cells[y*this.map.sizeY + x].getSymbol();
                 s += '|';
             }
             lines.push(s);
         }
         return lines;
+    }
+
+
+    /**
+     * Returns the symbol of the creature at a certain coordinates pair.
+     *
+     * @param x
+     * @param y
+     */
+    getCreatureSymbol(x: number, y:number) {
+        let s = null;
+        this.creatures.forEach(creature => {
+            if (creature.x === x && creature.y === y) {
+                console.log(creature);
+                s = creature.symbol;
+            }
+        });
+        return s;
     }
 }

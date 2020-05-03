@@ -15,7 +15,7 @@ export class WorldController {
     status() {
         return {
             map: {},
-            creatures: {},
+            creatures: this.world.creatures,
             toLines: this.world.toLines(),
         }
     }

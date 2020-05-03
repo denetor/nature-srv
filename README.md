@@ -23,4 +23,4 @@ Nicola Da Rold
 
 ## License
 
-  Nest is [MIT licensed](LICENSE).
+This software is [MIT licensed](LICENSE).
