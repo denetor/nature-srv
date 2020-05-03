@@ -10,8 +10,8 @@ This is a simple wildlife simulator, sever side.
 - [x] Map class
 - [x] Map.toString()
 - [x] WorldClass class, with Map as property
-- [ ] Creature class (generic creature class)
-- [ ] Sheep creature
+- [x] Creature class (generic creature class)
+- [x] Sheep creature
 - [ ] Add Creatures property to WorldClass
 - [ ] Create a simple world with mini map and some creatures
 - [ ] WorldClass.toString()
