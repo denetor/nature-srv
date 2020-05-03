@@ -6,7 +6,6 @@ export class World {
 
     constructor() {
         this.map = new Map(10, 10);
-        this.map.toString();
     }
 
 
@@ -15,5 +14,13 @@ export class World {
      */
     toString() {
         return this.map.toString();
+    }
+
+
+    /**
+     * Array of string representation
+     */
+    toLines() {
+        return this.map.toLines();
     }
 }

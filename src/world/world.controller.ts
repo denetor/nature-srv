@@ -16,7 +16,7 @@ export class WorldController {
         return {
             map: {},
             creatures: {},
-            toString: this.world.toString(),
+            toLines: this.world.toLines(),
         }
     }
 }

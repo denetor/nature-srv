@@ -40,4 +40,21 @@ export class Map {
         }
         return s;
     }
+
+
+    /**
+     * Array of string representation
+     */
+    toLines() {
+        let lines = [];
+        let s = '';
+        for (let y=0; y<this.sizeY; y++) {
+            s = '';
+            for (let x=0; x<this.sizeX; x++) {
+                s += this.cells[y*this.sizeY + x].toString();
+            }
+            lines.push(s);
+        }
+        return lines;
+    }
 }
